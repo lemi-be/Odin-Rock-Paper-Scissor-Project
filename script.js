@@ -23,3 +23,23 @@ function computerChoice() {
   return randomPrompts;
 }
 
+// Picking the winner
+// set function called pickWinner
+function pickWinner() {
+  // make an if else statement to camper the computer and users choice
+  if (userChoice() === "Rock" && computerChoice() === "Paper") {
+    console.log("You lose: Paper beats Rock");
+  } else if (userChoice() === "Paper" && computerChoice() === "Rock") {
+    console.log("You win: Paper beats Rock");
+  } else if (userChoice() === "Paper" && computerChoice() === "Scissors") {
+    console.log("You lose: Scissors beats Paper");
+  } else if (userChoice() === "Scissors" && computerChoice() === "Paper") {
+    console.log("You win: Scissors beats Paper");
+  } else if (userChoice() === "Rock" && computerChoice() === "Scissors") {
+    console.log("You win: Rock beats Scissors");
+  } else if (userChoice() === "Scissors" && computerChoice() === "Rock") {
+    console.log("You lose: Rock beats Scissors");
+  }
+}
+
+
