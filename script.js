@@ -59,4 +59,4 @@ function display() {
   console.log(pickWinner(userSelection, computerSelection));
 }
 
-//  display();
+ display();
