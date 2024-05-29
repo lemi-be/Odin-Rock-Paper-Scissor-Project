@@ -25,21 +25,38 @@ function computerChoice() {
 
 // Picking the winner
 // set function called pickWinner
-function pickWinner() {
+function pickWinner(user, computer) {
   // make an if else statement to camper the computer and users choice
-  if (userChoice() === "Rock" && computerChoice() === "Paper") {
+  if (user === "Rock" && computer === "Paper") {
     console.log("You lose: Paper beats Rock");
-  } else if (userChoice() === "Paper" && computerChoice() === "Rock") {
+  } else if (user === "Paper" && computer === "Rock") {
     console.log("You win: Paper beats Rock");
-  } else if (userChoice() === "Paper" && computerChoice() === "Scissors") {
+  } else if (user === "Paper" && computer === "Scissors") {
     console.log("You lose: Scissors beats Paper");
-  } else if (userChoice() === "Scissors" && computerChoice() === "Paper") {
+  } else if (user === "Scissors" && computer === "Paper") {
     console.log("You win: Scissors beats Paper");
-  } else if (userChoice() === "Rock" && computerChoice() === "Scissors") {
+  } else if (user === "Rock" && computer === "Scissors") {
     console.log("You win: Rock beats Scissors");
-  } else if (userChoice() === "Scissors" && computerChoice() === "Rock") {
+  } else if (user === "Scissors" && computer === "Rock") {
     console.log("You lose: Rock beats Scissors");
+  } else {
+    console.log("Enter correct input!!");
   }
 }
 
+// make an CLI to display and interact with the code
+// set function called display
+function display() {
+  // display welcome message
+  promptMessage();
+  const userSelection = userChoice();
+  const computerSelection = computerChoice();
+  // display user input
+  console.log("you choose ", userSelection);
+  // display computer choice
+  console.log("computer choose ", computerSelection);
+  // display winner
+  console.log(pickWinner(userSelection, computerSelection));
+}
 
+//  display();
